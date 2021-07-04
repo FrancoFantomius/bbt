@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HF - Api | About</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='HF.png') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <img src="{{ url_for('static', filename='HF - API.svg') }}" alt="HF API">
+        <br>
+        Questa è la pagina per le informazioni del sito
+        <table border="0">
+            <tr>
+                <th>
+                    Nome applicazione
+                </th>
+                <td>{{nome}}</td>
+            </tr>
+                <th>Versione</th>
+                <td>{{versione}}</td>
+        </table>
+    </body>
+</html>

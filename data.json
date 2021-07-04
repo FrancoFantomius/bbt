@@ -1,0 +1,12 @@
+{
+    "0e448f98cbc594d8374ebecab698b4ddc08fb1ee" : {
+        "full-name" : "HF API",
+        "current-version" : "2021.07.04",
+        "app-type" : "api"
+    },
+    "e47ef025b3efbec46fcdf0cebbc831078c3ac300" : {
+        "full-name" : "Borbot Desktop App",
+        "current-version" : "alfa 2021.06.27",
+        "app-type" : ""
+    }
+}
