@@ -10,17 +10,17 @@ msg = reqparse.RequestParser()
 msg.add_argument("Richiesta", type = str, required = True, help = "Prego inserire i dati in {Rischiesta : '...'}")
 
 class ControlloAggiornamenti(Resource):
-    def post(self, app):
-        if app == 1:
-            return {"Build" : "alfa 0.01"}
-        return {"Error" : "Inserire un id app."}
+    def post(self, appid):
+        biblio = open("data.json")
+        data = json.load(biblio)
+        return {appid : data[appid]}
 
 class RisposteBorbot(Resource):
     def put(self, messaggio):
         inpt = msg.parse_args()
         return {"Risposta" : inpt['Richiesta']}
 
-API.add_resource(ControlloAggiornamenti, "/update/<string:app>")
+API.add_resource(ControlloAggiornamenti, "/update/<string:appid>")
 API.add_resource(RisposteBorbot, "/msg/<int:messaggio>")
 
 @app.route("/")
